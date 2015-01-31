@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if carton exec true 1>/dev/null 2>&1
+then
+    carton exec \perldoc -MPod::Text::Color::Delight $@
+else
+    \perldoc -MPod::Text::Color::Delight $@
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+mkdir -p $HOME/.vim/bundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +BundleInstall +qall
