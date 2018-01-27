@@ -24,7 +24,7 @@ function branch_color() {
     fi
 }
 branch_color='branch_color'
-export PS1='\[\033[1;'${PROMPT_COLOR}'m\][\u@\h:\w]\[\033[1;$('${branch_color}')m\]($('"${showbranch}"'))\n\[\033[1;'${PROMPT_COLOR}'m\]\$ \[\033[0m\]'
+export PS1='\[\033[0;'${PROMPT_COLOR}'m\][\u:\w]\[\033[0;$('${branch_color}')m\]($('"${showbranch}"'))\n\[\033[0;'${PROMPT_COLOR}'m\]\$ \[\033[0m\]'
 
 # color settings for ls command
 if [ -f ~/.dir_colors ]; then
