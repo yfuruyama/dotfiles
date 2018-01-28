@@ -368,9 +368,9 @@ augroup filetype_settings
     autocmd FileType perl set iskeyword+=:
 
     " HTML
-    autocmd FileType html setl tabstop=4 expandtab shiftwidth=4
-    autocmd FileType xhtml setl tabstop=4 expandtab shiftwidth=4
-    autocmd FileType htmldjango setl tabstop=4 expandtab shiftwidth=4
+    autocmd FileType html setl tabstop=2 expandtab shiftwidth=2
+    autocmd FileType xhtml setl tabstop=2 expandtab shiftwidth=2
+    autocmd FileType htmldjango setl tabstop=2 expandtab shiftwidth=2
     autocmd BufNewFile,BufRead *.tx set ft=html
     autocmd BufNewFile,BufRead *.tt set ft=html
 
@@ -378,7 +378,7 @@ augroup filetype_settings
     autocmd FileType scss.css setl tabstop=2 expandtab shiftwidth=2
 
     " JavaScript
-    autocmd FileType javascript setl tabstop=4 expandtab shiftwidth=4
+    autocmd FileType javascript setl tabstop=2 expandtab shiftwidth=2
     " .jsonファイルをjavascriptのsyntax highlightingにさせる
     autocmd BufNewFile,BufRead *.json set ft=javascript
 
