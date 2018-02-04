@@ -28,7 +28,6 @@ Bundle 'git://github.com/pangloss/vim-javascript.git'
 Bundle 'git://github.com/thinca/vim-ref.git'
 " Bundle 'git://github.com/dag/vim2hs.git'
 Bundle 'git://github.com/tpope/vim-markdown.git'
-Bundle 'git://github.com/jnwhiteh/vim-golang.git'
 Bundle 'git://github.com/thinca/vim-localrc'
 Bundle 'git://github.com/aklt/plantuml-syntax'
 " Bundle 'git://github.com/Shougo/vimproc.vim.git'
@@ -50,6 +49,7 @@ Bundle 'motemen/xslate-vim'
 Bundle 'JulesWang/css.vim'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'toyamarinyon/vim-swift'
+Bundle 'fatih/vim-go'
 source $VIMRUNTIME/macros/matchit.vim
 
 filetype plugin indent on
@@ -159,10 +159,10 @@ let g:neocomplcache_force_omni_patterns.objcpp =
 " let g:clang_auto_select = 0
 
 " Neocomplcache and Golang
-if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.go = '\h\w*\.\?'
+" if !exists('g:neocomplcache_omni_patterns')
+    " let g:neocomplcache_omni_patterns = {}
+" endif
+" let g:neocomplcache_omni_patterns.go = '\h\w*\.\?'
 
 " CtrlP
 " let g:loaded_ctrlp = 1 " to disable ctrlp
@@ -233,6 +233,9 @@ augroup vimrc-plugin-ref
   \                                b:ref_perldoc_word . "\<CR>" :
   \ 's') : 's'
 augroup END
+
+" golang
+let g:go_fmt_command = "goimports"
 
 " === Key Mapping === {{{1
 
@@ -342,6 +345,7 @@ set tabstop=4
 "set smartindent
 
 
+
 " === File Type Settings === {{{1
 augroup filetype_settings
     autocmd!
@@ -374,7 +378,8 @@ augroup filetype_settings
     autocmd BufNewFile,BufRead *.tx set ft=html
     autocmd BufNewFile,BufRead *.tt set ft=html
 
-    " SCSS
+    " CSS, SCSS
+    autocmd FileType css setl tabstop=2 expandtab shiftwidth=2
     autocmd FileType scss.css setl tabstop=2 expandtab shiftwidth=2
 
     " JavaScript
@@ -390,9 +395,6 @@ augroup filetype_settings
 
     " Config
     autocmd BufNewFile,BufRead *.cnf set ft=conf
-
-    " Golang
-    autocmd BufNewFile,BufRead *.go set ft=go
 
 augroup END
 
