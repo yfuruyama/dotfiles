@@ -396,6 +396,9 @@ augroup filetype_settings
     " Config
     autocmd BufNewFile,BufRead *.cnf set ft=conf
 
+    " YAML
+    autocmd FileType yaml setl tabstop=2 expandtab shiftwidth=2
+
 augroup END
 
 " Automatic interpolation of package directive
