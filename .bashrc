@@ -85,7 +85,12 @@ alias cd=cdls
 function godoc_with_peco() {
     \godoc `list_go_pkg | peco` | less
 }
-alias godoc=godoc_with_peco
+alias gd=godoc_with_peco
+
+function golook() {
+    \godoc -src `list_go_pkg | peco` | vim -R - -c 'set ft=go'
+}
+alias golook=golook
 
 # export LANG=ja_JP.UTF-8
 
