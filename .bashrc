@@ -74,6 +74,7 @@ alias pullreq='hub pull-request'
 alias rlog='cat $HOME/.tailer.rc | peco | bash -'
 alias puml='java -jar /usr/local/bin/plantuml.jar'
 alias gcloud_project="gcloud config list --format 'value(core.project)'"
+alias k="kubectl"
 # alias e="emacsclient -t"
 # alias kill-emacs="emacsclient -e '(kill-emacs)'"
 function cdls() {
