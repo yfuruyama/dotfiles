@@ -113,8 +113,8 @@ export PATH=/usr/texbin:"$PATH"
 
 # Android
 alias android23='emulator -avd AVD_for_Nexus_One_by_Google'
-if [ -f $HOME/.git-completion.bash ] ; then
-    . ~/.git-completion.bash
+if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ] ; then
+    . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
