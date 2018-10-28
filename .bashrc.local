@@ -44,5 +44,5 @@ function perldoc_in_carton() {
 alias perldoc=perldoc_in_carton
 
 export PATH=$PATH:$HOME/android-sdk-macosx/tools:$HOME/android-sdk-macosx/platform-tools
-
 export PATH=$PATH:$HOME/google-cloud-sdk/bin
+export PATH=$PATH:$HOME/lib/apache-maven-3.5.4/bin
