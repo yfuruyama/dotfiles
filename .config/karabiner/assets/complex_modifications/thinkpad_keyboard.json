@@ -1,0 +1,24 @@
+{
+  "title": " Thinkpad Keyboard",
+  "rules": [
+    {
+      "description": "Disable mouse middle button",
+      "manipulators": [
+        { "type": "basic",
+          "from": {
+            "pointing_button": "button3"
+          }
+        },
+        { "type": "basic",
+          "from": {
+            "pointing_button": "button3",
+            "modifiers": { "mandatory": [ "command" ] }
+          },
+          "to": [
+            { "pointing_button": "button3" }
+          ]
+        }
+      ]
+    }
+  ]
+}
