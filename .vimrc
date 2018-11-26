@@ -50,6 +50,7 @@ Bundle 'JulesWang/css.vim'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'toyamarinyon/vim-swift'
 Bundle 'fatih/vim-go'
+Bundle 'git://github.com/leafgarland/typescript-vim'
 source $VIMRUNTIME/macros/matchit.vim
 
 filetype plugin indent on
