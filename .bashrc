@@ -84,7 +84,7 @@ function cdls() {
 alias cd=cdls
 
 function godoc_with_peco() {
-    \godoc `list_go_pkg | peco` | less
+    \go doc -all `list_go_pkg | peco` | less
 }
 alias gd=godoc_with_peco
 
