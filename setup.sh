@@ -1,13 +1,13 @@
 #!/bin/bash
 
 ## Create symbolic links
-ln -s .bashrc $HOME/.bashrc
-ln -s .dir_colors $HOME/.dir_colors
-ln -s .gitconfig $HOME/.gitconfig
-ln -s .gitignore $HOME/.gitignore
-ln -s .inputrc $HOME/.inputrc
-ln -s .tmux.conf $HOME/.tmux.conf
-ln -s .vimrc $HOME/.vimrc
+ln -f -s `pwd`/.bashrc $HOME/.bashrc
+ln -f -s `pwd`/.dir_colors $HOME/.dir_colors
+ln -f -s `pwd`/.gitconfig $HOME/.gitconfig
+ln -f -s `pwd`/.gitignore $HOME/.gitignore
+ln -f -s `pwd`/.inputrc $HOME/.inputrc
+ln -f -s `pwd`/.tmux.conf $HOME/.tmux.conf
+ln -f -s `pwd`/.vimrc $HOME/.vimrc
 
 ## Setup vim
 source .vimsetup
