@@ -28,7 +28,6 @@ Bundle 'git://github.com/pangloss/vim-javascript.git'
 Bundle 'git://github.com/thinca/vim-ref.git'
 " Bundle 'git://github.com/dag/vim2hs.git'
 Bundle 'git://github.com/tpope/vim-markdown.git'
-Bundle 'git://github.com/thinca/vim-localrc'
 Bundle 'git://github.com/aklt/plantuml-syntax'
 " Bundle 'git://github.com/Shougo/vimproc.vim.git'
 " Bundle 'git://github.com/Shougo/vimshell.vim.git'
@@ -51,6 +50,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'toyamarinyon/vim-swift'
 Bundle 'fatih/vim-go'
 Bundle 'git://github.com/leafgarland/typescript-vim'
+Bundle 'https://github.com/hashivim/vim-terraform.git'
 source $VIMRUNTIME/macros/matchit.vim
 
 filetype plugin indent on
