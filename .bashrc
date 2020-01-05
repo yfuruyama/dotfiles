@@ -25,8 +25,10 @@ function branch_color() {
 }
 branch_color='branch_color'
 # export PS1='\[\033[0;'${PROMPT_COLOR}'m\][\u:\w]\[\033[0;$('${branch_color}')m\]($('"${showbranch}"'))\n\[\033[0;'${PROMPT_COLOR}'m\]\$ \[\033[0m\]'
-adc_active='adc active 2>/dev/null'
-export PS1='\[\033[0;'${PROMPT_COLOR}'m\][\u:\w]\[\033[0;$('${branch_color}')m\]($('"${showbranch}"'))($('"${adc_active}"'))\n\[\033[0;'${PROMPT_COLOR}'m\]\$ \[\033[0m\]'
+#adc_active='adc active 2>/dev/null'
+current_k8s_ctx='kubectl config current-context'
+default_gcp_project='cat ~/.config/gcloud/configurations/config_default | grep project | cut -d '=' -f 2 | tr -d "[:space:]"'
+export PS1='\[\033[0;'${PROMPT_COLOR}'m\][\u:\w]\[\033[0;$('${branch_color}')m\]($('"${showbranch}"'))($('"${default_gcp_project}"'))($('"${current_k8s_ctx}"'))\n\[\033[0;'${PROMPT_COLOR}'m\]\$ \[\033[0m\]'
 
 # color settings for ls command
 if [ -f ~/.dir_colors ]; then
@@ -77,7 +79,11 @@ alias rlog='cat $HOME/.tailer.rc | peco | bash -'
 alias puml='java -jar /usr/local/bin/plantuml.jar'
 alias gcloud_project="gcloud config list --format 'value(core.project)'"
 alias k="kubectl"
-alias gcessh='gcloud compute ssh --zone $(gcloud compute instances list --format="value(name,zone)" | peco | awk "{print \$2,\$1}")'
+alias gcessh='gcloud compute ssh --zone $(gcloud compute instances list --format="value(name,zone)" --filter="status=RUNNING" | peco | awk "{print \$2,\$1}")'
+alias gcessh-iap='gcloud beta compute ssh --tunnel-through-iap --zone $(gcloud compute instances list --format="value(name,zone)" --filter="status=RUNNING" | peco | awk "{print \$2,\$1}")'
+alias kubectx='kubectl config use-context $(kubectl config get-contexts -oname | peco)'
+alias pod='kubectl describe pods -n $(kubectl get pods -A -o custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace | peco | awk "{print \$2,\$1}")'
+alias gcloudctx='gcloud config set core/project $(gcloud projects list --format="value(project_id)" | peco)'
 # alias e="emacsclient -t"
 # alias kill-emacs="emacsclient -e '(kill-emacs)'"
 function cdls() {
@@ -87,7 +93,7 @@ function cdls() {
 alias cd=cdls
 
 function godoc_with_peco() {
-    \godoc `list_go_pkg | peco` | less
+    \go doc -all `list_go_pkg | peco` | less
 }
 alias gd=godoc_with_peco
 
