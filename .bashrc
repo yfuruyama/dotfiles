@@ -84,6 +84,7 @@ alias gcessh-iap='gcloud beta compute ssh --tunnel-through-iap --zone $(gcloud c
 alias kubectx='kubectl config use-context $(kubectl config get-contexts -oname | peco)'
 alias pod='kubectl describe pods -n $(kubectl get pods -A -o custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace | peco | awk "{print \$2,\$1}")'
 alias gcloudctx='gcloud config set core/project $(gcloud projects list --format="value(project_id)" | peco)'
+alias gauth='gcloud config set account $(gcloud auth list --format="value(account)" | peco) && gcloud auth list'
 # alias e="emacsclient -t"
 # alias kill-emacs="emacsclient -e '(kill-emacs)'"
 function cdls() {
@@ -102,7 +103,7 @@ function golook() {
 }
 alias golook=golook
 
-# export LANG=ja_JP.UTF-8
+export LC_ALL=en_US.UTF-8
 
 function pmlook() {
     PERL5LIB=local/lib/perl5 \perldoc -m -T $@ | vim -R - -c 'set ft=perl'
