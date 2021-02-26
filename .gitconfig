@@ -21,9 +21,9 @@
     ; diff-highlight is located at
     ;     https://raw.githubusercontent.com/git/git/master/contrib/diff-highlight/diff-highlight
     ; download it and put it into the directory where PATH is enabled.
-    log = diff-highlight | less
-    show = diff-highlight | less
-    diff = diff-highlight | less
+    ; log = diff-highlight | less
+    ; show = diff-highlight | less
+    ; diff = diff-highlight | less
 [include]
     path = ~/dotfiles/.gitconfig.local
 [credential "https://source.developers.google.com"]

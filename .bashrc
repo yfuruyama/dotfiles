@@ -170,4 +170,4 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # eval "$(pyenv init -)"
 
 # aws
-export PATH=$HOME/aws-cli:${PATH}
+export PATH=$HOME/aws-cli/bin:${PATH}
