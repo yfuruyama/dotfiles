@@ -1,21 +1,16 @@
-# vim: set ft=conf
-
-# update homebrew itself
-update
-
-# add repositories
-tap homebrew/versions || true
-
 # packages
-install ctags
-install jq
-install tree
-install wget
-install tmux
-install rlwrap
-install readline
-install coreutils
-install the_silver_searcher
-
-# remove outdated versions
-cleanup
+brew "ctags"
+brew "jq"
+brew "tree"
+brew "wget"
+brew "tmux"
+brew "rlwrap"
+brew "readline"
+brew "coreutils"
+brew "the_silver_searcher"
+brew "java"
+brew "ghq"
+brew "peco"
+brew "dive"
+brew "protoc"
+brew "circleci"
