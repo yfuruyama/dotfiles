@@ -13,7 +13,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/anaconda3/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/furuyama/google-cloud-sdk/path.bash.inc' ]; then . '/Users/furuyama/google-cloud-sdk/path.bash.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk/path.bash.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/furuyama/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/furuyama/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
