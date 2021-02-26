@@ -4,6 +4,9 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+# Disable macOS zsh prompt message
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # added by Anaconda3 5.1.0 installer
