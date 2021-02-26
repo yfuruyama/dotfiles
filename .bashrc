@@ -152,22 +152,22 @@ export PATH=$PATH:$HOME/lib/apache-maven-3.6.0/bin
 export PATH=$PATH:$HOME/pear/bin
 
 # jenv
-eval "$(jenv init -)"
+# eval "$(jenv init -)"
 
 # personal bin
 export PATH=$HOME/bin:$PATH
 
 # use java8
-export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+# export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 ## If Java11 is needed, remove following comment.
 # export JAVA_HOME=`/usr/libexec/java_home -v "11"`
-export PATH=${JAVA_HOME}/bin:${PATH}
+# export PATH=${JAVA_HOME}/bin:${PATH}
 
 # krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # pyenv
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 # aws
 export PATH=$HOME/aws-cli:${PATH}
