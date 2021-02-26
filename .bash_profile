@@ -7,11 +7,6 @@ fi
 # Disable macOS zsh prompt message
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# added by Anaconda3 5.1.0 installer
-export PATH="/anaconda3/bin:$PATH"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk/path.bash.inc"; fi
 

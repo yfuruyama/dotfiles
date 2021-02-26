@@ -1,7 +1,6 @@
 [user]
     name = Yuki Furuyama
-    email = furuyama@google.com
-    ; email = addsict@gmail.com
+    email = addsict@gmail.com
 [color]
     ui = auto
 [core]
@@ -14,18 +13,12 @@
     br = branch
     lg = "log --graph --all --color --decorate --oneline -20"
     diff = "diff --histogram"
-    ; pull-dryrun  = !"git fetch origin; B=$(git rev-parse --abbrev-ref HEAD); git diff --stat --summary ${B}..origin/${B}"
-[merge]
-    ; ff = false
 [pager]
-    ; diff-highlight is located at
-    ;     https://raw.githubusercontent.com/git/git/master/contrib/diff-highlight/diff-highlight
-    ; download it and put it into the directory where PATH is enabled.
-    ; log = diff-highlight | less
-    ; show = diff-highlight | less
-    ; diff = diff-highlight | less
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
 [include]
-    path = ~/dotfiles/.gitconfig.local
+    path = ~/.gitconfig.local
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
 [pull]

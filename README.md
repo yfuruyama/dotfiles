@@ -1,6 +1,12 @@
-My dotfiles
+# My dotfiles
+
+Install:
 
 ```sh
-# Install
-$ ./setup.sh
+./setup.sh
 ```
+
+Add following files for local settings:
+
+* ~/.bashrc.local
+* ~/.gitconfig.local

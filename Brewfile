@@ -14,3 +14,4 @@ brew "peco"
 brew "dive"
 brew "protobuf"
 brew "circleci"
+brew "git" # to get diff-highlight
