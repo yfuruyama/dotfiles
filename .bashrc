@@ -31,13 +31,14 @@ default_gcp_project='cat ~/.config/gcloud/configurations/config_default | grep p
 export PS1='\[\033[0;'${PROMPT_COLOR}'m\][\u:\w]\[\033[0;$('${branch_color}')m\]($('"${showbranch}"'))($('"${default_gcp_project}"'))($('"${current_k8s_ctx}"'))\n\[\033[0;'${PROMPT_COLOR}'m\]\$ \[\033[0m\]'
 
 # color settings for ls command
-if [ -f ~/.dir_colors ]; then
-    # for Linux
-    eval `dircolors ~/.dir_colors -b`
-else
-    # for Mac OS
-    export LSCOLORS=gxfxcxdxbxegedabagacad
-fi
+# if [ -f ~/.dir_colors ]; then
+    # # for Linux
+    # eval `dircolors ~/.dir_colors -b`
+# else
+    # # for Mac OS
+    # export LSCOLORS=gxfxcxdxbxegedabagacad
+# fi
+export LSCOLORS=gxfxcxdxbxegedabagacad
 
 export HISTSIZE=10000
 export HISTFILESIZE=10000
