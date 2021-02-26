@@ -130,6 +130,40 @@ fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-PATH=$PATH:/usr/local/bin
-export PATH
-alias chrome_nexus='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --user-agent="Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.122 Mobile Safari/537.36" --user-data-dir=/tmp/nexus4chrome';
+export PATH=$PATH:/usr/local/bin
+
+# Homebrew
+export PATH=$HOME/homebrew/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/homebrew/lib:$LD_LIBRARY_PATH
+
+# dircolors (cf. https://qiita.com/y_310/items/101ef023124072b9c73f)
+export PATH=$HOME/homebrew/opt/coreutils/libexec/gnubin:$PATH
+
+# go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+
+# maven
+export PATH=$PATH:$HOME/lib/apache-maven-3.6.0/bin
+
+# pear
+export PATH=$PATH:$HOME/pear/bin
+
+# jenv
+eval "$(jenv init -)"
+
+# personal bin
+export PATH=$HOME/bin:$PATH
+
+# use java8
+export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+## If Java11 is needed, remove following comment.
+# export JAVA_HOME=`/usr/libexec/java_home -v "11"`
+export PATH=${JAVA_HOME}/bin:${PATH}
+
+# krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# pyenv
+eval "$(pyenv init -)"
