@@ -85,6 +85,7 @@ alias kubectx='kubectl config use-context $(kubectl config get-contexts -oname |
 alias pod='kubectl describe pods -n $(kubectl get pods -A -o custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace | peco | awk "{print \$2,\$1}")'
 alias gcloudctx='gcloud config set core/project $(gcloud projects list --format="value(project_id)" | peco)'
 alias gauth='gcloud config set account $(gcloud auth list --format="value(account)" | peco) && gcloud auth list'
+alias goland='open -a Goland .'
 # alias e="emacsclient -t"
 # alias kill-emacs="emacsclient -e '(kill-emacs)'"
 function cdls() {

@@ -28,9 +28,11 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'fatih/vim-go'
 Bundle 'git://github.com/leafgarland/typescript-vim'
 Bundle 'https://github.com/hashivim/vim-terraform.git'
+Bundle 'elixir-editors/vim-elixir'
 source $VIMRUNTIME/macros/matchit.vim
 
 filetype plugin indent on
+
 
 
 
@@ -128,11 +130,14 @@ let Tlist_Exit_OnlyWindow = 1
 
 " vim-flake8
 " autocmd FileType python nnoremap <silent> <C-l> :call Flake8()<CR>
-autocmd FileType python autocmd BufWritePre *.py call Flake8()
+" autocmd FileType python autocmd BufWritePre *.py call Flake8()
 " let g:flake8_ignore="E123"
 
 " golang
 let g:go_fmt_command = "goimports"
+
+" Terraform
+let g:terraform_fmt_on_save=1
 
 " === Key Mapping === {{{1
 

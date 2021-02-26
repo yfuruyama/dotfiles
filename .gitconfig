@@ -1,6 +1,7 @@
 [user]
     name = Yuki Furuyama
-    email = addsict@gmail.com
+    email = furuyama@google.com
+    ; email = addsict@gmail.com
 [color]
     ui = auto
 [core]
@@ -25,3 +26,7 @@
     diff = diff-highlight | less
 [include]
     path = ~/dotfiles/.gitconfig.local
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh
+[pull]
+	ff = only
