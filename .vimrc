@@ -5,30 +5,10 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'git://github.com/gmarik/vundle'
-Bundle 'git://github.com/tpope/vim-surround.git'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/scrooloose/nerdtree.git'
-Bundle 'git://github.com/scrooloose/syntastic.git'
-Bundle 'git://github.com/thinca/vim-quickrun.git'
-Bundle 'git://github.com/Shougo/neocomplcache.git'
-Bundle 'git://github.com/Shougo/neosnippet.git'
-Bundle 'git://github.com/Shougo/neosnippet-snippets.git'
 Bundle 'git://github.com/jonathanfilip/vim-lucius'
-Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
-Bundle 'git://github.com/pangloss/vim-javascript.git'
-Bundle 'git://github.com/tpope/vim-markdown.git'
-Bundle 'git://github.com/aklt/plantuml-syntax'
-Bundle 'https://github.com/nvie/vim-flake8.git'
-Bundle 'gtags.vim'
-Bundle 'a.vim'
-Bundle 'taglist.vim'
-Bundle 'JulesWang/css.vim'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'fatih/vim-go'
-Bundle 'git://github.com/leafgarland/typescript-vim'
-Bundle 'https://github.com/hashivim/vim-terraform.git'
-Bundle 'elixir-editors/vim-elixir'
 source $VIMRUNTIME/macros/matchit.vim
 
 filetype plugin indent on

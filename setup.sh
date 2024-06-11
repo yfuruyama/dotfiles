@@ -3,6 +3,7 @@
 ## Create symbolic links
 ln -f -s `pwd`/.bashrc $HOME/.bashrc
 ln -f -s `pwd`/.bash_profile $HOME/.bash_profile
+ln -f -s `pwd`/.zprofile $HOME/.zprofile
 ln -f -s `pwd`/.dir_colors $HOME/.dir_colors
 ln -f -s `pwd`/.gitconfig $HOME/.gitconfig
 ln -f -s `pwd`/.gitignore $HOME/.gitignore
