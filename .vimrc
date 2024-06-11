@@ -4,17 +4,13 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'git://github.com/gmarik/vundle'
-Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-Bundle 'git://github.com/scrooloose/nerdtree.git'
-Bundle 'git://github.com/jonathanfilip/vim-lucius'
-Bundle 'git://github.com/kien/ctrlp.vim.git'
+Bundle 'https://github.com/gmarik/vundle'
+Bundle 'https://github.com/scrooloose/nerdtree.git'
+Bundle 'https://github.com/jonathanfilip/vim-lucius'
+Bundle 'https://github.com/kien/ctrlp.vim.git'
 source $VIMRUNTIME/macros/matchit.vim
 
 filetype plugin indent on
-
-
-
 
 " === Plugin Settings === {{{1
 
@@ -24,63 +20,9 @@ colorscheme lucius
 let g:lucius_style='dark'
 syntax on
 
-" NERDCommenter
-let NERDSpaceDelims = 1 " /**/ => /* */ 
-let NERDShuntUp = 1 " No warnings for not compatible file type
-
 " NERDTree
 let NERDChristmasTree=1
 let NERDTreeHighlightCursorline=1
-
-"" quickrun.vim
-let g:quickrun_config={'*': {'split': ''}}
-set splitbelow
-
-" shormarks.vim
-:let g:showmarks_include="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-" syntastic
-let g:syntastic_mode_map = { 'mode': 'passive',
-                           \ 'active_filetypes': ['perl'],
-                           \ 'passive_filetypes': ['javascript'] }
-let g:syntastic_auto_loc_list = 1 " エラーが出た時にQuickFixを立ち上げる
-let g:syntasitc_javascript_checker = 'jshint'
-
-" GNU global
-nnoremap <C-g><C-j> :GtagsCursor<CR>
-nnoremap <C-g><C-h> :Gtags -f %<CR>
-nnoremap <C-g><C-g> :Gtags -g <C-r><C-w><CR>
-
-" Neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default'    : '',
-    \ 'perl'       : $HOME . '/dotfiles/dict/perl.dict'
-    \ }
-
-" for snippets
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory = $HOME . "/dotfiles/snippets"
-imap <expr><C-k> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<C-n>"
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" Neocomplcache and clang_complete
-if !exists('g:neocomplcache_force_omni_patterns')
-  let g:neocomplcache_force_omni_patterns = {}
-endif
-let g:neocomplcache_force_overwrite_completefunc = 1
-let g:neocomplcache_force_omni_patterns.c =
-  \ '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplcache_force_omni_patterns.cpp =
-  \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " CtrlP
 " let g:loaded_ctrlp = 1 " to disable ctrlp
@@ -95,23 +37,8 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<c-i>'],
   \ }
 
-
 " NERDTree
 nmap <silent> <C-e> :NERDTreeToggle<CR>
-
-" NERDCommenter
-nmap <silent> <C-c> <plug>NERDCommenterToggle
-vmap <silent> <C-c> <plug>NERDCommenterToggle
-
-" taglist
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
-let Tlist_Use_Right_Window = 1
-let Tlist_Exit_OnlyWindow = 1
-
-" vim-flake8
-" autocmd FileType python nnoremap <silent> <C-l> :call Flake8()<CR>
-" autocmd FileType python autocmd BufWritePre *.py call Flake8()
-" let g:flake8_ignore="E123"
 
 " golang
 let g:go_fmt_command = "goimports"
@@ -299,7 +226,6 @@ set ttimeoutlen=10
 " ステータスラインを常に表示
 set laststatus=2
 " ステータスライン表示設定
-set statusline=%<%f\ %m%r%h%w%y%{'\ \ \/'.(&fenc!=''?&fenc:&enc).'\/'.&ff.'\/'}\ \ %{fugitive#statusline()}%=%l,%c%V%8P
 highlight statusline term=NONE cterm=NONE ctermbg=black ctermfg=white
 set incsearch
 set ignorecase
