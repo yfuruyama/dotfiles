@@ -1,5 +1,5 @@
-if [ -f ~/.bashrc.local ]; then
-    . ~/.bashrc.local
+if [ -f ~/.zshrc.local ]; then
+    . ~/.zshrc.local
 fi
 
 # prompt
@@ -16,6 +16,7 @@ function branch_color() {
 }
 branch_color='branch_color'
 export PS1='\[\033[0;'${PROMPT_COLOR}'m\][\u:\w]\[\033[0;$('${branch_color}')m\]($('"${showbranch}"'))\n\[\033[0;'${PROMPT_COLOR}'m\]\$ \[\033[0m\]'
+export PROMPT='%F{green[%n:%~]}%f '
 
 # color settings for ls command
 alias dircolors="/opt/homebrew/opt/coreutils/libexec/gnubin/dircolors"
