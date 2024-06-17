@@ -6,6 +6,7 @@ call vundle#rc()
 
 Bundle 'https://github.com/gmarik/vundle'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
+Bundle 'https://github.com/preservim/nerdcommenter'
 Bundle 'https://github.com/jonathanfilip/vim-lucius'
 Bundle 'https://github.com/kien/ctrlp.vim.git'
 source $VIMRUNTIME/macros/matchit.vim
@@ -23,6 +24,12 @@ syntax on
 " NERDTree
 let NERDChristmasTree=1
 let NERDTreeHighlightCursorline=1
+
+" NERDCommenter
+nmap <silent> <C-c> <plug>NERDCommenterToggle
+vmap <silent> <C-c> <plug>NERDCommenterToggle
+let NERDSpaceDelims = 1 " /**/ => /* */ 
+let NERDShuntUp = 1 " No warnings for not compatible file type
 
 " CtrlP
 " let g:loaded_ctrlp = 1 " to disable ctrlp
